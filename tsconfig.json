@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+	  "target": "ES2020", // Modern ECMAScript target
+	  "module": "NodeNext", // Use Node's native ESM
+	  "moduleResolution": "NodeNext", // Resolve modules in ESM style
+	  "outDir": "./backend/dist", // Output directory
+	  "rootDir": "./backend/src", // Input directory for TypeScript files
+	  "strict": true, // Enable strict type-checking options
+	  "esModuleInterop": true, // Ensure compatibility between ES modules and CommonJS
+	  "skipLibCheck": true // Skip type-checking of declaration files
+	},
+	"include": ["backend/src/**/*"], // Include all .ts files in backend/src
+	"exclude": ["node_modules", "**/*.spec.ts", "frontend"] // Exclude certain files and directories
+  }
+  
