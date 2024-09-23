@@ -2,6 +2,10 @@ import express from "express";
 import authRoutes from "./routes/auth.route"; // No .ts extension
 import messageRoutes from "./routes/message.route"; // No .ts extension
 
+// using this code we can use environmental variable 
+import dotenv from "dotenv"
+dotenv.config();
+
 const app = express();
 
 app.use("/api/auth", authRoutes);
