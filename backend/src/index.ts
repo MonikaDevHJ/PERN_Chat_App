@@ -4,9 +4,14 @@ import messageRoutes from "./routes/message.route"; // No .ts extension
 
 // using this code we can use environmental variable 
 import dotenv from "dotenv"
+import e from "express";
 dotenv.config();
 
 const app = express();
+
+
+// used for parsing application/json
+app.use(express.json());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
