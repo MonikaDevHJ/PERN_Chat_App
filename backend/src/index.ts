@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors"; // Importing the cors package
 import authRoutes from "./routes/auth.route";
 import messageRoutes from "./routes/message.route";
+import cookieParser from "cookie-parser"
 
 // using this code we can use environmental variables
 import dotenv from "dotenv";
@@ -12,6 +13,8 @@ const app = express();
 // Middleware to enable CORS
 app.use(cors()); // This will allow cross-origin requests from all domains
 
+
+app.use(cookieParser());
 // used for parsing application/json
 app.use(express.json());
 
